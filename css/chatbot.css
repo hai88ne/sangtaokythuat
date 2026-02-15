@@ -1,0 +1,237 @@
+/* --- CẤU HÌNH CƠ BẢN --- */
+:root {
+    --primary-red: #8B0000;
+    --primary-gold: #D4AF37;
+    --primary-blue: #0056b3;
+    --white: #ffffff;
+    --light-bg: #f4f6f8;
+    --msg-user-bg: #0056b3;
+    --msg-bot-bg: #ffffff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Google Sans', sans-serif; }
+
+/* --- NÚT TOGGLE (Sửa lỗi hiển thị ảnh) --- */
+.chatbot-toggler {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    border: none;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-red);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    padding: 10px; /* Padding để ảnh không sát viền */
+}
+
+/* Ảnh bên trong nút toggle */
+.chatbot-toggler img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none; /* Tránh click vào ảnh */
+}
+
+.chatbot-toggler:hover { transform: scale(1.1); background: #a00000; }
+
+body.show-chatbot .chatbot-toggler { display: none; } /* Ẩn nút khi mở chat */
+
+/* --- KHUNG CHATBOT --- */
+.chatbot {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 400px; /* Kích thước chuẩn */
+    height: 550px;
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.5);
+    transform-origin: bottom right;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+}
+
+body.show-chatbot .chatbot { opacity: 1; pointer-events: auto; transform: scale(1); }
+
+/* Chế độ Fullscreen */
+.chatbot.fullscreen {
+    width: 100% !important;
+    height: 100% !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-radius: 0 !important;
+    z-index: 10000; /* Đè lên tất cả */
+}
+
+/* --- HEADER --- */
+.chatbot header {
+    background: var(--primary-red);
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+}
+
+.header-info { display: flex; align-items: center; gap: 12px; }
+
+.bot-logo {
+    width: 40px; height: 40px;
+    background: var(--white);
+    border-radius: 50%;
+    padding: 5px;
+    object-fit: contain;
+}
+
+.bot-text h3 { color: var(--white); font-size: 1.1rem; font-weight: 700; margin: 0; }
+.bot-text p { color: rgba(255,255,255,0.85); font-size: 0.8rem; margin: 0; }
+
+.header-controls { display: flex; gap: 8px; }
+
+.header-controls button {
+    background: rgba(255,255,255,0.2);
+    border: none;
+    color: var(--white);
+    width: 32px; height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    display: flex; align-items: center; justify-content: center;
+}
+
+.header-controls button:hover { background: var(--white); color: var(--primary-red); }
+
+/* --- CHATBOX --- */
+.chatbox {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: var(--light-bg);
+}
+
+.chat { display: flex; list-style: none; margin-bottom: 20px; }
+
+/* Avatar */
+.chat .bot-icon, .chat .user-icon {
+    width: 35px; height: 35px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-right: 10px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.chat .bot-icon img, .chat .user-icon i {
+    width: 70%; height: 70%; object-fit: contain;
+}
+.chat .user-icon i { font-size: 1.2rem; color: #555; margin-top: 5px;} 
+
+.chat.outgoing { justify-content: flex-end; }
+.chat.outgoing .user-icon { margin-right: 0; margin-left: 10px; display: none; }
+
+/* Hiện avatar user khi Fullscreen */
+.chatbot.fullscreen .chat.outgoing .user-icon { display: flex; }
+
+/* Bong bóng chat */
+.chat p {
+    white-space: normal;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 85%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.chat .chat-content {
+    white-space: normal;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 85%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.chat.incoming .chat-content,
+.chat.incoming p {
+    background: var(--msg-bot-bg);
+    color: #333;
+    border-top-left-radius: 2px;
+}
+
+.chat.outgoing .chat-content {
+    background: var(--msg-user-bg);
+    color: var(--white);
+    border-top-right-radius: 2px;
+}
+
+.chat-link-btn {
+    text-decoration: none;
+    color: #fff;                    /* chữ trắng */
+    background: var(--primary-red);
+    padding: 10px 16px;
+    border-radius: 999px;           /* bo tròn như button */
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+.chat-link-btn:hover {
+    background: #a00000;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+.chat.outgoing .chat-content .chat-link { color: white; }
+
+/* --- INPUT --- */
+.chat-input {
+    display: flex; gap: 10px; padding: 15px 20px;
+    background: var(--white); border-top: 1px solid #eee;
+    align-items: flex-end;
+}
+
+.chat-input textarea {
+    height: 50px; width: 100%;
+    border: 1px solid #ddd; border-radius: 25px;
+    outline: none; resize: none;
+    padding: 14px 20px; font-size: 0.95rem;
+    background: #f9f9f9;
+    max-height: 150px;
+}
+
+.chat-input textarea:focus { border-color: var(--primary-blue); background: var(--white); }
+
+.chat-input span {
+    color: var(--primary-blue); font-size: 1.2rem;
+    cursor: pointer; height: 50px; width: 50px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%; transition: 0.2s;
+}
+.chat-input span:hover { background: #eef5ff; }
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .chatbot { width: 100%; height: 100%; right: 0; bottom: 0; border-radius: 0; }
+    .chatbot-toggler { right: 20px; bottom: 20px; }
+    .chat.outgoing .user-icon { display: flex; } /* Mobile luôn hiện avatar user */
+}

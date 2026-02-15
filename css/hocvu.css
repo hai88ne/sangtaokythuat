@@ -1,0 +1,321 @@
+/* --- HOC VU SO SPECIAL STYLES --- */
+
+.hocvu-hero {
+    background: var(--primary-red) !important;
+    padding-bottom: 80px !important;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.course-section {
+    padding: 50px 0;
+    margin-top: -40px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.course-column {
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    border: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- THEME RED PASTEL (Bình dân học vụ số) --- */
+.theme-red-pastel { background-color: #fff5f5; border-top: 5px solid #ffcccc; }
+.theme-red-pastel .course-header h2 { color: #8b0000; }
+.theme-red-pastel .stats-badge { background: #f8d7da; color: #842029; }
+.theme-red-pastel .access-btn { background: #8b0000; color: white; }
+
+/* Đồng nhất màu các bước trong hệ Đỏ */
+.s-red-unified .s-idx { background: #8b0000; color: white; }
+
+/* --- THEME BLUE PASTEL (Phổ cập AI) --- */
+.theme-blue-pastel { background-color: #f0f7ff; border-top: 5px solid #cfe2ff; }
+.theme-blue-pastel .course-header h2 { color: #004085; }
+.theme-blue-pastel .stats-badge { background: #cfe2ff; color: #084298; }
+.theme-blue-pastel .access-btn { background: #004085; color: white; }
+
+/* Đồng nhất màu các bước trong hệ Xanh */
+.s-blue-unified .s-idx { background: #004085; color: white; }
+
+.course-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.course-header h2 {
+    font-size: 1.6rem;
+    margin-bottom: 5px;
+}
+
+.agency {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.stats-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin: 0 auto 20px;
+}
+
+/* Video */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    background: #000;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+
+/* Steps */
+.steps-container {
+    flex-grow: 1;
+    margin-bottom: 25px;
+}
+
+.steps-container h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.hocvu-step {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    align-items: flex-start;
+}
+
+.s-idx {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    flex-shrink: 0;
+    font-size: 0.85rem;
+}
+
+.s-text {
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* Access Area */
+.access-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: 1px dashed rgba(0,0,0,0.1);
+}
+
+.access-btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none !important;
+    transition: var(--transition);
+}
+
+.qr-code img {
+    width: 80px;
+    height: 80px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+/* --- RESULTS SECTION (Thành tựu) --- */
+.results-section {
+    padding: 60px 0;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: var(--transition);
+}
+
+.result-item img:hover {
+    transform: scale(1.03);
+}
+
+.result-item p {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+/* --- SIDEBAR & NAV MOBILE --- */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-red);
+    font-size: 1.6rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.sidebar-menu {
+    position: fixed;
+    top: 0; 
+    left: -280px; /* Ban đầu ẩn bên trái */
+    width: 280px; 
+    height: 100%;
+    background: white;
+    z-index: 2001;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menu.active { 
+    left: 0; /* Trượt ra khi có class active */
+}
+
+.sidebar-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: none;
+    backdrop-filter: blur(2px);
+}
+
+.sidebar-overlay.active { 
+    display: block; 
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: var(--primary-red);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.close-sidebar {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.sidebar-links {
+    list-style: none;
+    padding: 15px 0;
+    overflow-y: auto;
+}
+
+.sidebar-links li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    text-decoration: none !important;
+    color: #333;
+    font-weight: 500;
+    transition: background 0.2s;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.sidebar-links li a i {
+    width: 20px;
+    color: var(--primary-red);
+    text-align: center;
+}
+
+.sidebar-links li a:hover,
+.sidebar-links li a.active {
+    color: var(--primary-red);
+    background: #fff5f5;
+}
+
+/* --- RESPONSIVE QUERIES --- */
+@media (max-width: 992px) {
+    .course-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .results-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .mobile-menu-btn { 
+        display: block; 
+    }
+    .nav-links { 
+        display: none; 
+    }
+    
+    /* Điều chỉnh Hero cho Mobile */
+    .hocvu-hero h1 {
+        font-size: 1.6rem;
+    }
+    .hocvu-hero p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .results-grid { 
+        grid-template-columns: 1fr; 
+    }
+    .course-column {
+        padding: 20px;
+    }
+    .access-area {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
