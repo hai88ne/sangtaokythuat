@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cổng thông tin số xã Tiên Lữ - Thông tin hướng dẫn tiện ích số</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Cổng thông tin số xã Tiên Lữ - Thông tin hướng dẫn tiện ích số, ứng dụng VNeID và bản đồ số xã Tiên Lữ. Giải pháp sáng tạo hỗ trợ công dân chuyển đổi số cấp cơ sở.">
+    <meta property="og:title" content="Cổng thông tin số xã Tiên Lữ">
+    <meta property="og:description" content="Điểm đến số duy nhất cho công dân xã Tiên Lữ về TTHC và Giáo dục số.">
+    <meta property="og:image" content="public/images/Header.svg">
+    
+    <!-- Favicon -->
+    <link href="https://tienlu.phutho.gov.vn/templates/sj_news/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+    
+    <!-- Fonts: Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS chính -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- FontAwesome cho các icon phụ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-actions {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        
+        .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+        
+        /* Nút Hướng dẫn sử dụng (Màu Vàng chủ đạo) */
+        .hero-btn-primary {
+            background: var(--primary-gold, #D4AF37);
+            color: var(--primary-red, #8B0000);
+            border: 2px solid var(--primary-gold, #D4AF37);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .hero-btn-primary:hover {
+            background: transparent;
+            color: var(--primary-gold, #D4AF37);
+            transform: translateY(-3px);
+        }
+        
+        /* Nút Giới thiệu (Viền trắng trong suốt) */
+        .hero-btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+        }
+        
+        .hero-btn-outline:hover {
+            background: white;
+            color: var(--primary-red, #8B0000);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Responsive cho mobile */
+        @media (max-width: 768px) {
+            .hero-actions {
+                flex-direction: column;
+                gap: 15px;
+                padding: 0 20px;
+                width: 100%;
+            }
+            .hero-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body class="home-page">
+
+    <!-- HEADER SECTION: LOGO CENTERED -->
+    <header class="main-header">
+        <div class="logo-area">
+            <div class="container">
+                <a href="index.html" class="logo-link">
+                    <img src="public/images/Header.svg" alt="Logo xã Tiên Lữ" class="header-logo">
+                </a>
+            </div>
+        </div>
+        
+        <!-- NAVIGATION AREA: BELOW LOGO -->
+        <nav class="main-nav">
+            <div class="container nav-wrapper">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Trang chủ</a></li>
+                    <li><a href="vneid/index.html">Ứng dụng VNeID</a></li>
+                    <li><a href="thutuchanhchinh/index.html">Hướng dẫn TTHC</a></li>
+                    <li><a href="binhdanhocvuso/index.html">Bình dân học vụ số</a></li>
+                    <li><a href="bandoso/index.html">Bản đồ số</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION: GIỚI THIỆU (Màu đỏ, uốn cong nhẹ) -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Hệ thống thông tin hướng dẫn tiện ích số</h1>
+                    <p>Chào mừng bà con nhân dân đến với điểm đến số duy nhất của xã Tiên Lữ. Hệ thống cung cấp hướng dẫn chi tiết các thủ tục hành chính, ứng dụng định danh điện tử và các tiện ích số thiết yếu.</p>
+                    <div class="hero-actions">
+                        <a href="huongdansudung.html" class="hero-btn hero-btn-primary">
+                            <i class="fas fa-book-reader"></i> Hướng dẫn sử dụng
+                        </a>
+                        <a href="gioithieu.html" class="hero-btn hero-btn-outline">
+                            <i class="fas fa-info-circle"></i> Giới thiệu giải pháp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION: MENU CHỨC NĂNG VỚI SVG ICONS -->
+        <section class="features-grid-section">
+            <div class="container">
+                <h2 class="section-title">Danh mục chức năng</h2>
+                <div class="features-grid">
+                    
+                    <!-- Chức năng 1 -->
+                    <a href="vneid/index.html" class="feature-card">
+                        <div class="card-icon-wrapper">
+                            <img src="public/images/vneid.svg" alt="Icon VNeID" class="module-svg-icon">
+                        </div>
+                        <h3>Ứng dụng VNeID</h3>
+                        <p>Hướng dẫn cài đặt, kích hoạt và sử dụng ứng dụng định danh và xác thực điện tử của Bộ Công an một cách dễ dàng.</p>
+                        <span class="card-action">Xem hướng dẫn <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- Chức năng 2 -->
+                    <a href="thutuchanhchinh/index.html" class="feature-card">
+                        <div class="card-icon-wrapper">
+                            <img src="public/images/thutuchanhchinh.svg" alt="Icon TTHC" class="module-svg-icon">
+                        </div>
+                        <h3>Hướng dẫn thủ tục hành chính</h3>
+                        <p>Tra cứu quy trình, hồ sơ và cách nộp hồ sơ trực tuyến các thủ tục hành chính cấp xã nhanh chóng.</p>
+                        <span class="card-action">Tra cứu ngay <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- Chức năng 3 -->
+                    <a href="binhdanhocvuso/index.html" class="feature-card">
+                        <div class="card-icon-wrapper">
+                            <img src="public/images/binhdanhocvuso.png" alt="Icon Học vụ" class="module-icon">
+                        </div>
+                        <h3>Bình dân học vụ số</h3>
+                        <p>Nền tảng giáo dục số, phổ cập kiến thức AI và kỹ năng số cho mọi người dân trong thời đại mới.</p>
+                        <span class="card-action">Vào lớp học <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                    <!-- Chức năng 4 -->
+                    <a href="bandoso/index.html" class="feature-card">
+                        <div class="card-icon-wrapper">
+                            <img src="public/images/bandoso.svg" alt="Icon Bản đồ" class="module-svg-icon">
+                        </div>
+                        <h3>Bản đồ số 360°</h3>
+                        <p>Tham quan thực tế ảo các cơ quan hành chính xã: UBND, Công an xã, Đảng ủy qua công nghệ 360 độ.</p>
+                        <span class="card-action">Khám phá ngay <i class="fas fa-arrow-right"></i></span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Cột 1: Logo & Giới thiệu -->
+                <div class="footer-col about">
+                    <img src="public/images/Footer.svg" alt="DVC Logo" class="footer-logo">
+                    <p class="footer-desc">Giải pháp số hóa hướng dẫn dịch vụ công tích hợp AI hỗ trợ chuyển đổi số cấp cơ sở tại xã Tiên Lữ, tỉnh Phú Thọ.</p>
+                </div>
+
+                <!-- Cột 2: Tác giả 1 -->
+                <div class="footer-col">
+                    <h4>TÁC GIẢ CHÍNH</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Trọng Hải</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hai88ne@gmail.com">hai88ne@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0787421820" target="_blank">0787.421.820</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Tác giả 2 -->
+                <div class="footer-col">
+                    <h4>ĐỒNG TÁC GIẢ</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Thị Hòa</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:nguyenhoacpvp@gmail.com">nguyenhoacpvp@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0972435413" target="_blank">0972.435.413</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4: Liên kết (Cập nhật link mới) -->
+                <div class="footer-col">
+                    <h4>LIÊN KẾT NHANH</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://dichvucong.gov.vn" target="_blank">Cổng DVC Quốc gia</a></li>
+                        <li><a href="https://tienlu.phutho.gov.vn" target="_blank">Trang TTĐT xã Tiên Lữ</a></li>
+                        <li><a href="/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="/huongdansudung.html">Hướng dẫn sử dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hệ thống đang trong quá trình thử nghiệm. Triển khai theo Quyết định số .../QĐ-UBND ngày .../01/2026 của UBND xã Tiên Lữ.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/chatbot-loader.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

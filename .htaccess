@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# --- PHẦN 1: XỬ LÝ INDEX.HTML ---
+# Nếu URL là .../index.html thì chuyển về thư mục cha (ví dụ: /khoi6/)
+RewriteCond %{THE_REQUEST} /index\.html [NC]
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# --- PHẦN 2: XỬ LÝ CÁC FILE .HTML KHÁC ---
+# Nếu URL là huongdansudung.html -> chuyển thành huongdansudung
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L,NE]
+
+# --- PHẦN 3: XỬ LÝ NỘI BỘ (QUAN TRỌNG) ---
+# Giúp server hiểu rằng khi khách vào "huongdansudung" thì ngầm tải file "huongdansudung.html"
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+</IfModule>

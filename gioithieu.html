@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu Dự án - Xã Tiên Lữ</title>
+    
+    <!-- Favicon -->
+    <link href="https://tienlu.phutho.gov.vn/templates/sj_news/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tepkhac.css"> <!-- Load CSS chuyên biệt -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="logo-area">
+            <div class="container">
+                <a href="index.html" class="logo-link">
+                    <img src="public/images/Header.svg" alt="Logo xã Tiên Lữ" class="header-logo">
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container nav-wrapper">
+                <button class="mobile-menu-btn" id="openSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="vneid/index.html">Ứng dụng VNeID</a></li>
+                    <li><a href="thutuchanhchinh/index.html">Hướng dẫn TTHC</a></li>
+                    <li><a href="binhdanhocvuso/index.html">Bình dân học vụ số</a></li>
+                    <li><a href="bandoso/index.html">Bản đồ số</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- KHÔNG DÙNG CARD CHO TIÊU ĐỀ - ĐẶT RIÊNG -->
+        <div class="container">
+            <section class="intro-header-section">
+                <h1 class="solution-name">Hệ thống số hóa hướng dẫn dịch vụ công <br> tích hợp trí tuệ nhân tạo hỗ trợ chuyển đổi số cấp cơ sở</h1>
+                <p class="solution-subtitle">Giải pháp tham dự Hội thi Sáng tạo Kỹ thuật tỉnh Phú Thọ năm 2026</p>
+            </section>
+        </div>
+
+        <div class="container intro-section">
+            
+            <!-- CARD 1: TỔNG QUAN (Màu Đỏ chủ đạo) -->
+            <div class="intro-card">
+                <h2 class="intro-title title-red"><i class="fas fa-info-circle"></i> Tổng quan Giải pháp</h2>
+                <div class="intro-content">
+                    <p><strong>Lĩnh vực:</strong> Công nghệ thông tin, Điện tử, Viễn thông.</p>
+                    <p><strong>Đối tượng phục vụ:</strong> Công dân xã Tiên Lữ, đặc biệt là người cao tuổi, người lao động tự do và người mới tiếp cận công nghệ thông tin.</p>
+                    <p><strong>Mục tiêu cốt lõi:</strong> Xây dựng "Điểm đến số duy nhất" (One-stop Digital Hub) giúp người dân dễ dàng tiếp cận các dịch vụ công trực tuyến, định danh điện tử và nền tảng giáo dục số mà không cần cài đặt nhiều ứng dụng phức tạp.</p>
+                </div>
+            </div>
+
+            <!-- CARD 2: NHÓM TÁC GIẢ (Đẩy lên thứ 2 - Màu Vàng Gold) -->
+            <div class="intro-card">
+                <h2 class="intro-title title-red"><i class="fas fa-users"></i> Nhóm tác giả thực hiện</h2>
+                <div class="author-grid">
+                    <!-- Tác giả 1 -->
+                    <div class="author-card">
+                        <div class="author-img-placeholder">
+                            <!-- Link ảnh trống (placeholder), sẽ thay sau -->
+                            <img src="/public/images/nguyentronghai.webp" alt="Nguyễn Trọng Hải">
+                        </div>
+                        <div class="author-name">Nguyễn Trọng Hải</div>
+                        <div class="author-role">Chủ nhiệm giải pháp</div>
+                        <p style="font-size: 0.9rem; color: #666;">Thiết kế kiến trúc hệ thống & Lập trình Code</p>
+                    </div>
+
+                    <!-- Tác giả 2 -->
+                    <div class="author-card">
+                        <div class="author-img-placeholder">
+                            <!-- Link ảnh trống -->
+                            <img src="/public/images/nguyenthihoa.webp" alt="Nguyễn Thị Hòa">
+                        </div>
+                        <div class="author-name">Nguyễn Thị Hòa</div>
+                        <div class="author-role">Đồng chủ nhiệm</div>
+                        <p style="font-size: 0.9rem; color: #666;">Biên tập nội dung & Xây dựng kịch bản số hóa</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CARD 3: TÍNH MỚI (Màu Xanh Dương) -->
+            <div class="intro-card">
+                <h2 class="intro-title title-blue"><i class="fas fa-lightbulb"></i> Tính mới & Sáng tạo</h2>
+                <div class="intro-content">
+                    <ul style="padding-left: 20px;">
+                        <li><strong>Tích hợp All-in-One:</strong> Kết hợp 4 module chức năng thiết yếu (TTHC, VNeID, Giáo dục số, Bản đồ số) trên cùng một giao diện web.</li>
+                        <li><strong>Giao diện Step-by-Step:</strong> Thay thế văn bản hành chính dài dòng bằng hướng dẫn dạng bước trực quan, dễ hiểu.</li>
+                        <li><strong>Công cụ hỗ trợ tiếp cận:</strong> Tích hợp Text-to-Speech (Đọc văn bản) và tùy chỉnh cỡ chữ cho người khiếm thị/người già.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CARD 4: HIỆU QUẢ (Màu Xanh Lá) -->
+            <div class="intro-card">
+                <h2 class="intro-title title-green"><i class="fas fa-chart-line"></i> Hiệu quả Kinh tế - Xã hội</h2>
+                <div class="intro-content">
+                    <p>Giải pháp giúp tiết kiệm thời gian đi lại cho người dân, giảm tải áp lực cho cán bộ bộ phận Một cửa. Đồng thời, góp phần nâng cao chỉ số Chuyển đổi số (DTI) và xây dựng Nông thôn mới thông minh tại địa phương.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Cột 1: Logo & Giới thiệu -->
+                <div class="footer-col about">
+                    <img src="public/images/Footer.svg" alt="DVC Logo" class="footer-logo">
+                    <p class="footer-desc">Giải pháp số hóa hướng dẫn dịch vụ công tích hợp AI hỗ trợ chuyển đổi số cấp cơ sở tại xã Tiên Lữ, tỉnh Phú Thọ.</p>
+                </div>
+
+                <!-- Cột 2: Tác giả 1 -->
+                <div class="footer-col">
+                    <h4>TÁC GIẢ CHÍNH</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Trọng Hải</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hai88ne@gmail.com">hai88ne@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0787421820" target="_blank">0787.421.820</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Tác giả 2 -->
+                <div class="footer-col">
+                    <h4>ĐỒNG TÁC GIẢ</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Thị Hòa</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:nguyenhoacpvp@gmail.com">nguyenhoacpvp@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0972435413" target="_blank">0972.435.413</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4: Liên kết (Cập nhật link mới) -->
+                <div class="footer-col">
+                    <h4>LIÊN KẾT NHANH</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://dichvucong.gov.vn" target="_blank">Cổng DVC Quốc gia</a></li>
+                        <li><a href="https://tienlu.phutho.gov.vn" target="_blank">Trang TTĐT xã Tiên Lữ</a></li>
+                        <li><a href="/gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="/huongdansudung.html">Hướng dẫn sử dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hệ thống đang trong quá trình thử nghiệm. Triển khai theo Quyết định số .../QĐ-UBND ngày .../01/2026 của UBND xã Tiên Lữ.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sidebar Mobile -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="sidebar-header"><h3>Menu chức năng</h3><button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button></div>
+        <ul class="sidebar-links">
+            <li><a href="index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="vneid/index.html"><i class="fas fa-id-card"></i> Ứng dụng VNeID</a></li>
+            <li><a href="thutuchanhchinh/index.html"><i class="fas fa-file-alt"></i> Hướng dẫn TTHC</a></li>
+            <li><a href="binhdanhocvuso/index.html"><i class="fas fa-graduation-cap"></i> Bình dân học vụ số</a></li>
+            <li><a href="bandoso/index.html"><i class="fas fa-map-marked-alt"></i> Bản đồ số</a></li>
+        </ul>
+    </div>
+    <script src="js/chatbot-loader.js"></script>
+    <!-- Script Sidebar Mobile -->
+    <script>
+        const sidebar = document.getElementById('sidebarMenu');
+        const overlay = document.getElementById('sidebarOverlay');
+        const openBtn = document.getElementById('openSidebar');
+        const closeBtn = document.getElementById('closeSidebar');
+
+        if (openBtn && sidebar && overlay) {
+            openBtn.addEventListener('click', () => {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            });
+            const closeMenu = () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            };
+            closeBtn.addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+        }
+    </script>
+</body>
+</html>
