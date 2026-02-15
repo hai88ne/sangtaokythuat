@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trợ lý ảo DVC - Xã Tiên Lữ</title>
+    <!-- CSS cho Chatbot -->
+    <link rel="stylesheet" href="../css/chatbot.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Google Sans/Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Google+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
 
+    <!-- NÚT MỞ CHATBOT -->
+    <button class="chatbot-toggler">
+        <img src="../public/images/thutuchanhchinh.svg" alt="Chat Icon">
+    </button>
+
+    <!-- KHUNG CHATBOT -->
+    <div class="chatbot">
+        <header>
+            <div class="header-info">
+                <img src="../public/images/thutuchanhchinh.svg" alt="Logo" class="bot-logo">
+                <div class="bot-text">
+                    <h3>Trợ lý AI</h3>
+                    <p>Hỗ trợ dịch vụ công</p>
+                </div>
+            </div>
+            <div class="header-controls">
+                <button id="new-chat-btn" title="Cuộc trò chuyện mới"><i class="fas fa-sync-alt"></i></button>
+                <button id="expand-btn" title="Mở rộng"><i class="fas fa-expand-alt"></i></button>
+                <button id="close-btn" title="Đóng"><i class="fas fa-times"></i></button>
+            </div>
+        </header>
+        
+        <ul class="chatbox">
+            <li class="chat incoming">
+                <span class="bot-icon"><img src="../public/images/thutuchanhchinh.svg" alt="Bot"></span>
+                <p>Xin chào! 👋<br>Em là Trợ lý ảo AI chuyên trách hướng dẫn Thủ tục hành chính xã Tiên Lữ.<br>Anh/chị cần tìm hiểu về thủ tục nào ạ?</p>
+            </li>
+        </ul>
+        
+        <div class="chat-input">
+            <textarea placeholder="Nhập câu hỏi của bạn (Ví dụ: Thủ tục khai sinh)..." spellcheck="false" required></textarea>
+            <span id="send-btn"><i class="fas fa-paper-plane"></i></span>
+        </div>
+    </div>
+
+    <!-- Script Logic -->
+    <script src="chatbot.js"></script>
+
+</body>
+</html>
