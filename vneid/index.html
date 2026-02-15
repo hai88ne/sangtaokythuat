@@ -1,1 +1,462 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng VNeID - Cổng thông tin số xã Tiên Lữ</title>
+    
+    <!-- Favicon -->
+    <link href="https://tienlu.phutho.gov.vn/templates/sj_news/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS hệ thống và CSS chuyên biệt -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/vneid.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="vneid-page">
 
+    <!-- SIDEBAR MOBILE MENU -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="sidebar-header">
+            <h3>Menu chức năng</h3>
+            <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="index.html" class="active"><i class="fas fa-id-card"></i> Ứng dụng VNeID</a></li>
+            <li><a href="../thutuchanhchinh/index.html"><i class="fas fa-file-alt"></i> Hướng dẫn TTHC</a></li>
+            <li><a href="../binhdanhocvuso/index.html"><i class="fas fa-graduation-cap"></i> Bình dân học vụ số</a></li>
+            <li><a href="../bandoso/index.html"><i class="fas fa-map-marked-alt"></i> Bản đồ số</a></li>
+        </ul>
+    </div>
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="logo-area">
+            <div class="container">
+                <a href="../index.html" class="logo-link">
+                    <img src="../public/images/Header.svg" alt="Logo xã Tiên Lữ" class="header-logo">
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container nav-wrapper">
+                <button class="mobile-menu-btn" id="openSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="index.html" class="active">Ứng dụng VNeID</a></li>
+                    <li><a href="../thutuchanhchinh/index.html">Hướng dẫn TTHC</a></li>
+                    <li><a href="../binhdanhocvuso/index.html">Bình dân học vụ số</a></li>
+                    <li><a href="../bandoso/index.html">Bản đồ số</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION (Updated theo yêu cầu) -->
+        <section class="hero-section vneid-hero-bg">
+            <div class="container">
+                <div class="hero-content">
+                    <img src="../public/images/vneid.svg" alt="VNeID Logo" class="vneid-top-logo">
+                    <h1>Ứng dụng định danh và xác thực điện tử VNeID</h1>
+                    <p>Công dân sử dụng thiết bị hệ điều hành IOS (như Iphone, ...) vui lòng bấm vào "App Store", hệ điều hành Android (SamSung, Oppo, ...) vui lòng bấm vào "Google Play" để cài đặt ứng dụng</p>
+                    <div class="store-buttons">
+                        <a href="https://apps.apple.com/vn/app/vneid/id1582750372?l=vi" target="_blank" class="store-btn">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.vnid&pcampaignid=web_share" target="_blank" class="store-btn">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN 1: HƯỚNG DẪN CÀI ĐẶT & KÍCH HOẠT -->
+        <section class="guide-block bg-white" id="cai-dat">
+            <div class="container">
+                <h2 class="block-title">Hướng dẫn Cài đặt & Kích hoạt</h2>
+                
+                <!-- Tab Kích hoạt -->
+                <div class="vneid-tabs">
+                    <button class="v-tab-btn active" onclick="switchVTab(this, 'muc1')">Đăng ký Mức 1</button>
+                    <button class="v-tab-btn" onclick="switchVTab(this, 'muc2')">Đăng ký Mức 2</button>
+                </div>
+
+                <div id="muc1" class="v-tab-content active">
+                    <div class="guide-flex">
+                        <div class="guide-content">
+                            <div class="step-card step-blue">
+                                <div class="step-idx">1</div>
+                                <div class="step-info">
+                                    <h3>Tải ứng dụng & Đăng ký</h3>
+                                    <p>Tải VNeID từ kho ứng dụng. Chọn "Đăng ký" và điền thông tin cá nhân.</p>
+                                </div>
+                            </div>
+                            <div class="step-card step-blue">
+                                <div class="step-idx">2</div>
+                                <div class="step-info">
+                                    <h3>Quét NFC</h3>
+                                    <p>Sử dụng tính năng quét NFC trên điện thoại để đọc thông tin từ thẻ CCCD gắn chip.</p>
+                                </div>
+                            </div>
+                            <div class="step-card step-blue">
+                                <div class="step-idx">3</div>
+                                <div class="step-info">
+                                    <h3>Kích hoạt tài khoản</h3>
+                                    <p>Nhập mã OTP gửi về tin nhắn SMS để hoàn tất kích hoạt tài khoản Mức 1.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-media">
+                            <div class="embedded-video-container">
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/FshJ7tffIC8?si=jMmbmWGdEumOMaH9" title="Hướng dẫn Mức 1" allowfullscreen></iframe>
+                                </div>
+                                <p class="video-caption">Video hướng dẫn đăng ký tài khoản Mức 1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="muc2" class="v-tab-content">
+                    <div class="guide-flex">
+                        <div class="guide-content">
+                            <div class="step-card step-green">
+                                <div class="step-idx">1</div>
+                                <div class="step-info">
+                                    <h3>Chuẩn bị Sim chính chủ</h3>
+                                    <p>Đảm bảo số điện thoại đăng ký là chính chủ.</p>
+                                </div>
+                            </div>
+                            <div class="step-card step-green">
+                                <div class="step-idx">2</div>
+                                <div class="step-info">
+                                    <h3>Đến Trụ sở Công an</h3>
+                                    <p>Mang thẻ CCCD gắn chip đến Công an xã để thu nhận vân tay, chụp ảnh chân dung.</p>
+                                </div>
+                            </div>
+                            <div class="step-card step-green">
+                                <div class="step-idx">3</div>
+                                <div class="step-info">
+                                    <h3>Kích hoạt trên App</h3>
+                                    <p>Chờ tin nhắn thông báo kích hoạt, sau đó vào ứng dụng chọn "Kích hoạt tài khoản định danh điện tử".</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="guide-media">
+                            <div class="embedded-video-container">
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/V5uJGqQdK54?si=3kyN9YMN97rfDMZw" title="Hướng dẫn Mức 2" allowfullscreen></iframe>
+                                </div>
+                                <p class="video-caption">Video hướng dẫn đăng ký tài khoản Mức 2</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN 2: HƯỚNG DẪN TTHC -->
+        <section class="guide-block bg-light" id="tthc">
+            <div class="container">
+                <h2 class="block-title">Hướng dẫn Thủ tục Hành chính</h2>
+                
+                <!-- Accordion Style cho các mục con -->
+                <div class="vneid-accordion">
+                    
+                    <!-- Đăng ký Cư trú -->
+                    <div class="v-acc-item">
+                        <div class="v-acc-header" onclick="toggleVAcc(this)">
+                            <span>Đăng ký, quản lý cư trú</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="v-acc-body">
+                            <div class="sub-guide">
+                                <h4>a. Đăng ký tạm trú</h4>
+                                <p><strong>Bước 1:</strong> Đăng nhập VNeID -> Chọn "Thủ tục hành chính" -> "Đăng ký tạm trú".</p>
+                                <p><strong>Bước 2:</strong> Nhập Passcode -> Chọn "Tạo mới yêu cầu".</p>
+                                <p><strong>Bước 3:</strong> Điền thông tin theo mẫu và gửi hồ sơ.</p>
+                                
+                                <div class="embedded-video-container">
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/WC_mnMmiqL4" title="Video hướng dẫn Đăng ký tạm trú" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="video-caption">Video hướng dẫn Đăng ký tạm trú</p>
+                                </div>
+
+                                <hr>
+                                <h4>b. Đăng ký thường trú</h4>
+                                <p>Tương tự quy trình tạm trú, chọn mục "Đăng ký thường trú".</p>
+                                
+                                <div class="embedded-video-container">
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/Hu1dvpqztMw" title="Video hướng dẫn Đăng ký thường trú" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="video-caption">Video hướng dẫn Đăng ký thường trú</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cấp CCCD -->
+                    <div class="v-acc-item">
+                        <div class="v-acc-header" onclick="toggleVAcc(this)">
+                            <span>Cấp, quản lý Căn cước công dân</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="v-acc-body">
+                            <div class="sub-guide">
+                                <h4>a. Đối với người dưới 14 tuổi</h4>
+                                <div class="child-age-group">
+                                    <strong>- Trẻ từ 0 - 6 tuổi:</strong> Cha/mẹ đăng nhập VNeID -> Chọn "Thủ tục hành chính" -> "Cấp thẻ căn cước cho người dưới 14 tuổi" -> Tạo mới yêu cầu và thực hiện theo hướng dẫn.
+                                </div>
+                                <div class="child-age-group">
+                                    <strong>- Trẻ từ 6 - dưới 14 tuổi:</strong> Cha/mẹ đăng nhập VNeID chọn "Cấp thẻ căn cước cho người dưới 14 tuổi" (như trên) -> Tạo mới yêu cầu và thực hiện theo hướng dẫn. Sau đó, đưa trẻ đến Công an xã Lập Thạch để thu thập thông tin cá nhân và dữ liệu sinh trắc học.
+                                </div>
+                                <div class="embedded-video-container">
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/YWNMSACw_jM?si=ej2VVJH5L6948K06" title="Video hướng dẫn Đăng ký thường trú" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="video-caption">Video hướng dẫn cấp thẻ căn cước cho trẻ dưới 14 tuổi</p>
+                                </div>
+                                <hr>
+                                <h4>b. Đối với người từ đủ 14 tuổi</h4>
+                                <p>Cha/mẹ đăng nhập VNeID -> Chọn "Thủ tục hành chính" -> "Cấp thẻ căn cước cho người từ đủ 14 tuổi" -> Tạo mới yêu cầu và thực hiện theo hướng dẫn. Đưa trẻ đến Công an xã Lập Thạch để thu thập thông tin.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cấp đổi/Cấp lại thẻ Căn cước -->
+                    <div class="v-acc-item">
+                        <div class="v-acc-header" onclick="toggleVAcc(this)">
+                            <span>Cấp, đổi, cấp lại thẻ Căn cước</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="v-acc-body">
+                            <div class="sub-guide">
+                                <p><strong>Bước 1:</strong> Đăng nhập VNeID -> Thủ tục hành chính -> Chọn "Cấp đổi thẻ Căn cước" hoặc "Cấp lại thẻ Căn cước".</p>
+                                <p><strong>Bước 2:</strong> Nhập Passcode -> Tạo mới yêu cầu -> Điền thông tin.</p>
+                                <p><strong>Bước 3:</strong> Chọn lịch hẹn đến Công an xã Lập Thạch để thực hiện thủ tục.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lý lịch tư pháp -->
+                    <div class="v-acc-item">
+                        <div class="v-acc-header" onclick="toggleVAcc(this)">
+                            <span>Cấp phiếu lý lịch tư pháp</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="v-acc-body">
+                            <div class="sub-guide">
+                                <p><strong>Bước 1:</strong> Đăng nhập VNeID -> Thủ tục hành chính -> Chọn "Cấp phiếu lý lịch tư pháp".</p>
+                                <p><strong>Bước 2:</strong> Nhập Passcode -> Tạo mới yêu cầu -> Thực hiện theo hướng dẫn.</p>
+                                <div class="embedded-video-container">
+                                    <div class="video-wrapper">
+                                        <iframe src="https://www.youtube.com/embed/hMMd-Ayt_hM" title="Video hướng dẫn Lý lịch tư pháp" allowfullscreen></iframe>
+                                    </div>
+                                    <p class="video-caption">Video hướng dẫn cấp phiếu lý lịch tư pháp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Đăng ký xe -->
+                    <div class="v-acc-item">
+                        <div class="v-acc-header" onclick="toggleVAcc(this)">
+                            <span>Đăng ký xe lần đầu</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="v-acc-body">
+                            <div class="sub-guide">
+                                <p><strong>Bước 1:</strong> Chụp ảnh xe (góc 45 độ phía trước, rõ kiểu dáng). Ảnh jpg/png, dung lượng < 2MB.</p>
+                                <p><strong>Bước 2:</strong> Đăng nhập VNeID -> Thủ tục hành chính -> Đăng ký xe lần đầu-> Tạo mới yêu cầu và thực hiện theo hướng dẫn.</p>
+                            </div>
+                            <div class="embedded-video-container">
+                                <div class="video-wrapper">
+                                    <iframe src="https://www.youtube.com/embed/3-Zn9vzmyhY" title="Video hướng dẫn đăng ký xe lần đầu" allowfullscreen></iframe>
+                                </div>
+                                <p class="video-caption">Video hướng dẫn đăng ký xe lần đầu</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN 3: CHỮ KÝ SỐ -->
+        <section class="guide-block bg-white" id="chu-ky-so">
+            <div class="container">
+                <h2 class="block-title">Hướng dẫn cài đặt Chữ ký số</h2>
+                
+                <div class="vneid-tabs">
+                    <button class="v-tab-btn active" onclick="switchVTab(this, 'cks-vnpt')">VNPT SmartCA</button>
+                    <button class="v-tab-btn" onclick="switchVTab(this, 'cks-viettel')">Viettel MySign</button>
+                </div>
+
+                <div id="cks-vnpt" class="v-tab-content active text-center">
+                    <div class="embedded-video-container" style="max-width: 800px; margin: 0 auto;">
+                        <div class="video-wrapper">
+                            <!-- Thay ID video VNPT thực tế -->
+                            <iframe src="https://www.youtube.com/embed/uya034k9N8A" title="VNPT SmartCA" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Video hướng dẫn đăng ký chữ ký số VNPT SmartCA</p>
+                    </div>
+                </div>
+
+                <div id="cks-viettel" class="v-tab-content text-center">
+                    <div class="embedded-video-container" style="max-width: 800px; margin: 0 auto;">
+                        <div class="video-wrapper">
+                            <!-- Thay ID video Viettel thực tế -->
+                            <iframe src="https://www.youtube.com/embed/2049UCzCmcc" title="Viettel MySign" allowfullscreen></iframe>
+                        </div>
+                        <p class="video-caption">Video hướng dẫn đăng ký chữ ký số Viettel MySign</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN 4: TÍCH HỢP GIẤY TỜ -->
+        <section class="guide-block bg-light" id="tich-hop">
+            <div class="container">
+                <h2 class="block-title">Hướng dẫn Tích hợp giấy tờ</h2>
+                <div class="guide-flex reverse">
+                    <div class="guide-content">
+                        <div class="step-card step-orange">
+                            <div class="step-idx"><i class="fas fa-id-card"></i></div>
+                            <div class="step-info">
+                                <h3>Chọn loại giấy tờ</h3>
+                                <p>Vào mục "Ví giấy tờ" -> Chọn "Tích hợp giấy tờ" -> Chọn loại (GPLX, Đăng ký xe, BHYT...).</p>
+                            </div>
+                        </div>
+                        <div class="step-card step-orange">
+                            <div class="step-idx"><i class="fas fa-keyboard"></i></div>
+                            <div class="step-info">
+                                <h3>Nhập thông tin</h3>
+                                <p>Nhập các thông tin yêu cầu chính xác.</p>
+                            </div>
+                        </div>
+                        <div class="step-card step-orange">
+                            <div class="step-idx"><i class="fas fa-check-circle"></i></div>
+                            <div class="step-info">
+                                <h3>Gửi yêu cầu</h3>
+                                <p>Gửi yêu cầu và chờ hệ thống đối soát dữ liệu (thường mất 1-3 ngày).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guide-media">
+                        <div class="embedded-video-container">
+                            <div class="video-wrapper">
+                                <iframe src="https://www.youtube.com/embed/vV2OXRtGBb0?si=lIyFqfsVhWjO4RDg" title="Hướng dẫn tích hợp" allowfullscreen></iframe>
+                            </div>
+                            <p class="video-caption">Video hướng dẫn tích hợp giấy tờ vào VNeID</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col about">
+                    <img src="../public/images/Footer.svg" alt="DVC Logo" class="footer-logo">
+                    <p class="footer-desc">Giải pháp số hóa hướng dẫn dịch vụ công tích hợp AI hỗ trợ chuyển đổi số cấp cơ sở tại xã Tiên Lữ, tỉnh Phú Thọ.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>TÁC GIẢ CHÍNH</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Trọng Hải</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hai88ne@gmail.com">hai88ne@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0787421820" target="_blank">0787.421.820</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>ĐỒNG TÁC GIẢ</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Thị Hòa</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:nguyenhoacpvp@gmail.com">nguyenhoacpvp@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0972435413" target="_blank">0972.435.413</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>LIÊN KẾT NHANH</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://dichvucong.gov.vn" target="_blank">Cổng DVC Quốc gia</a></li>
+                        <li><a href="https://tienlu.phutho.gov.vn" target="_blank">Trang TTĐT xã Tiên Lữ</a></li>
+                        <li><a href="../gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="../huongdansudung.html">Hướng dẫn sử dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hệ thống đang trong quá trình thử nghiệm. Triển khai theo Quyết định số .../QĐ-UBND ngày .../01/2026 của UBND xã Tiên Lữ.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/chatbot-loader.js"></script>
+    <script>
+        // Xử lý Tabs
+        function switchVTab(btn, targetId) {
+            // Tìm container cha (để hỗ trợ nhiều bộ tab trên cùng 1 trang)
+            const parent = btn.closest('.container');
+            
+            // Xóa active ở các nút trong cùng bộ
+            parent.querySelectorAll('.v-tab-btn').forEach(b => b.classList.remove('active'));
+            // Thêm active cho nút được bấm
+            btn.classList.add('active');
+
+            // Ẩn tất cả nội dung tab trong cùng bộ
+            parent.querySelectorAll('.v-tab-content').forEach(c => c.classList.remove('active'));
+            // Hiện nội dung tab mục tiêu
+            document.getElementById(targetId).classList.add('active');
+        }
+
+        // Xử lý Accordion (Sổ xuống)
+        function toggleVAcc(header) {
+            header.classList.toggle('active');
+            const body = header.nextElementSibling;
+            if (body.style.maxHeight) {
+                body.style.maxHeight = null;
+            } else {
+                body.style.maxHeight = body.scrollHeight + "px";
+            }
+        }
+
+        // Mobile Sidebar
+        const sidebar = document.getElementById('sidebarMenu');
+        const overlay = document.getElementById('sidebarOverlay');
+        const openBtn = document.getElementById('openSidebar');
+        const closeBtn = document.getElementById('closeSidebar');
+
+        if(openBtn) {
+            openBtn.addEventListener('click', () => {
+                sidebar.classList.add('active');
+                overlay.classList.add('active');
+            });
+            closeBtn.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+        }
+    </script>
+</body>
+</html>
