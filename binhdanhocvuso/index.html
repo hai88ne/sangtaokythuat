@@ -1,1 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bình dân học vụ số - Cổng thông tin số xã Tiên Lữ</title>
+    
+    <!-- Favicon -->
+    <link href="https://tienlu.phutho.gov.vn/templates/sj_news/favicon.ico" rel="icon" type="image/vnd.microsoft.icon">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS hệ thống và CSS chuyên biệt -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/hocvu.css">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="hocvu-page">
 
+    <!-- SIDEBAR MOBILE MENU -->
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <div class="sidebar-menu" id="sidebarMenu">
+        <div class="sidebar-header">
+            <h3>Menu chức năng</h3>
+            <button class="close-sidebar" id="closeSidebar"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="sidebar-links">
+            <li><a href="../index.html"><i class="fas fa-home"></i> Trang chủ</a></li>
+            <li><a href="../vneid/index.html"><i class="fas fa-id-card"></i> Ứng dụng VNeID</a></li>
+            <li><a href="../thutuchanhchinh/index.html"><i class="fas fa-file-alt"></i> Hướng dẫn TTHC</a></li>
+            <li><a href="index.html" class="active"><i class="fas fa-graduation-cap"></i> Bình dân học vụ số</a></li>
+            <li><a href="../bandoso/index.html"><i class="fas fa-map-marked-alt"></i> Bản đồ số</a></li>
+        </ul>
+    </div>
+
+    <!-- HEADER: Logo Center & Nav -->
+    <header class="main-header">
+        <div class="logo-area">
+            <div class="container">
+                <a href="../index.html" class="logo-link">
+                    <img src="../public/images/Header.svg" alt="Logo xã Tiên Lữ" class="header-logo" style="max-width: 70%;">
+                </a>
+            </div>
+        </div>
+        <nav class="main-nav">
+            <div class="container nav-wrapper">
+                <button class="mobile-menu-btn" id="openSidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Trang chủ</a></li>
+                    <li><a href="../vneid/index.html">Ứng dụng VNeID</a></li>
+                    <li><a href="../thutuchanhchinh/index.html">Hướng dẫn TTHC</a></li>
+                    <li><a href="index.html" class="active">Bình dân học vụ số</a></li>
+                    <li><a href="../bandoso/index.html">Bản đồ số</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section hocvu-hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>Bình dân học vụ số & Phổ cập kỹ năng</h1>
+                    <p>Nâng cao năng lực tiếp cận công nghệ và trí tuệ nhân tạo cho mọi tầng lớp nhân dân xã Tiên Lữ.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN 2: HAI HỆ THỐNG KHÓA HỌC (Điều chỉnh màu Pastel) -->
+        <section class="course-section">
+            <div class="container">
+                <div class="course-grid">
+                    
+                    <!-- CỘT 1: BÌNH DÂN HỌC VỤ SỐ -->
+                    <div class="course-column theme-red-pastel">
+                        <div class="course-header">
+                            <h2>Bình dân học vụ số</h2>
+                            <p class="agency">Cơ quan chủ trì: Bộ Công an</p>
+                        </div>
+                        
+                        <div class="stats-badge">
+                            <i class="fas fa-users"></i> <span>+2 triệu người tham gia</span>
+                        </div>
+
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/Mhkkeqg8bLI?si=UNZ_NAZbCVFysd_B" title="Bình dân học vụ số" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="steps-container">
+                            <h3>Hướng dẫn tham gia:</h3>
+                            <div class="hocvu-step s-red-unified">
+                                <div class="s-idx">1</div>
+                                <div class="s-text">Truy cập địa chỉ <strong>binhdanhocvuso.gov.vn</strong></div>
+                            </div>
+                            <div class="hocvu-step s-red-unified">
+                                <div class="s-idx">2</div>
+                                <div class="s-text">Đăng nhập bằng tài khoản định danh VNeID mức 2.</div>
+                            </div>
+                            <div class="hocvu-step s-red-unified">
+                                <div class="s-idx">3</div>
+                                <div class="s-text">Hoàn thành bài học để nhận chứng nhận điện tử.</div>
+                            </div>
+                        </div>
+
+                        <div class="access-area">
+                            <div class="access-info">
+                                <a href="https://binhdanhocvuso.gov.vn" target="_blank" class="access-btn">VÀO HỌC NGAY</a>
+                                <p class="access-note">Quét mã để truy cập nhanh:</p>
+                            </div>
+                            <div class="qr-code">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://binhdanhocvuso.gov.vn" alt="QR Bình dân học vụ số">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CỘT 2: PHỔ CẬP AI -->
+                    <div class="course-column theme-blue-pastel">
+                        <div class="course-header">
+                            <h2>Phổ cập AI</h2>
+                            <p class="agency">Cơ quan chủ trì: Trung ương Đoàn TNCS Hồ Chí Minh</p>
+                        </div>
+                        
+                        <div class="stats-badge">
+                            <i class="fas fa-robot"></i> <span>+136 nghìn người tham gia</span>
+                        </div>
+
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/IRavLkoaYFo?si=s7A5JcuI_bcMpckj" title="Phổ cập AI" frameborder="0" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="steps-container">
+                            <h3>Hướng dẫn tham gia:</h3>
+                            <div class="hocvu-step s-blue-unified">
+                                <div class="s-idx">1</div>
+                                <div class="s-text">Truy cập <strong>phocap.ai</strong> và đăng ký tài khoản miễn phí.</div>
+                            </div>
+                            <div class="hocvu-step s-blue-unified">
+                                <div class="s-idx">2</div>
+                                <div class="s-text">Tham gia các khóa học về ChatGPT, AI cơ bản.</div>
+                            </div>
+                            <div class="hocvu-step s-blue-unified">
+                                <div class="s-idx">3</div>
+                                <div class="s-text">Ứng dụng AI vào thực tiễn đời sống và công việc.</div>
+                            </div>
+                        </div>
+
+                        <div class="access-area">
+                            <div class="access-info">
+                                <a href="https://phocap.ai" target="_blank" class="access-btn">VÀO HỌC NGAY</a>
+                                <p class="access-note">Quét mã để truy cập nhanh:</p>
+                            </div>
+                            <div class="qr-code">
+                                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://phocap.ai" alt="QR Phổ cập AI">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PHẦN 3: KẾT QUẢ & THÀNH TỰU (Bổ sung mới) -->
+        <section class="results-section bg-light">
+            <div class="container">
+                <h2 class="section-title">Kết quả & Thành tựu đạt được</h2>
+                <div class="results-grid">
+                    <!-- 8 Ảnh chứng nhận -->
+                    <div class="result-item">
+                        <img src="../public/images/chungnhan/phocapai.webp" alt="Chứng nhận 1">
+                        <p>Chứng nhận phổ cập AI</p>
+                    </div>
+                    <div class="result-item">
+                        <img src="../public/images/chungnhan/thanhnientinhnguyen.webp" alt="Chứng nhận 2">
+                        <p>Hỗ trợ chính quyền địa phương 2 cấp</p>
+                    </div>
+                    <div class="result-item">
+                        <img src="../public/images/chungnhan/chungnhan3.jpg" alt="Chứng nhận 3">
+                        <p>Hỗ trợ chính quyền địa phương 2 cấp</p>
+                    </div>
+                    <div class="result-item">
+                        <img src="../public/images/chungnhan/chungnhan4.jpg" alt="Chứng nhận 4">
+                        <p>Bình dân học vụ số</p>
+                    </div>
+                    <!--
+                    <div class="result-item">
+                        <img src="https://placehold.co/400x300/f8d7da/842029?text=Chung+Nhan+5" alt="Chứng nhận 5">
+                        <p>Sử dụng thành thạo VNeID</p>
+                    </div>
+                    <div class="result-item">
+                        <img src="https://placehold.co/400x300/cfe2ff/084298?text=Chung+Nhan+6" alt="Chứng nhận 6">
+                        <p>Ứng dụng AI trong hành chính</p>
+                    </div>
+                    <div class="result-item">
+                        <img src="https://placehold.co/400x300/f8d7da/842029?text=Chung+Nhan+7" alt="Chứng nhận 7">
+                        <p>Chứng nhận phổ cập tin học</p>
+                    </div>
+                    <div class="result-item">
+                        <img src="https://placehold.co/400x300/cfe2ff/084298?text=Chung+Nhan+8" alt="Chứng nhận 8">
+                        <p>Thành tựu chuyển đổi số xã 2026</p>
+                    </div>
+                -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Cột 1: Logo & Giới thiệu -->
+                <div class="footer-col about">
+                    <img src="../public/images/Footer.svg" alt="DVC Logo" class="footer-logo">
+                    <p class="footer-desc">Giải pháp số hóa hướng dẫn dịch vụ công tích hợp AI hỗ trợ chuyển đổi số cấp cơ sở tại xã Tiên Lữ, tỉnh Phú Thọ.</p>
+                </div>
+
+                <!-- Cột 2: Tác giả 1 -->
+                <div class="footer-col">
+                    <h4>TÁC GIẢ CHÍNH</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Trọng Hải</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:hai88ne@gmail.com">hai88ne@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0787421820" target="_blank">0787.421.820</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 3: Tác giả 2 -->
+                <div class="footer-col">
+                    <h4>ĐỒNG TÁC GIẢ</h4>
+                    <ul class="footer-link-list">
+                        <li><i class="fas fa-user"></i> <span>Nguyễn Thị Hòa</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:nguyenhoacpvp@gmail.com">nguyenhoacpvp@gmail.com</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="https://zalo.me/0972435413" target="_blank">0972.435.413</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cột 4: Liên kết (Cập nhật link mới) -->
+                <div class="footer-col">
+                    <h4>LIÊN KẾT NHANH</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://dichvucong.gov.vn" target="_blank">Cổng DVC Quốc gia</a></li>
+                        <li><a href="https://tienlu.phutho.gov.vn" target="_blank">Trang TTĐT xã Tiên Lữ</a></li>
+                        <li><a href="../gioithieu.html">Giới thiệu</a></li>
+                        <li><a href="../huongdansudung.html">Hướng dẫn sử dụng</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Hệ thống đang trong quá trình thử nghiệm. Triển khai theo Quyết định số .../QĐ-UBND ngày .../01/2026 của UBND xã Tiên Lữ.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/chatbot-loader.js"></script>
+    <script>
+        const sidebar = document.getElementById('sidebarMenu');
+        const overlay = document.getElementById('sidebarOverlay');
+        const openBtn = document.getElementById('openSidebar');
+        const closeBtn = document.getElementById('closeSidebar');
+
+        openBtn.addEventListener('click', () => {
+            sidebar.classList.add('active');
+            overlay.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
+</body>
+</html>
